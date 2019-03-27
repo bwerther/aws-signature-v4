@@ -224,7 +224,7 @@ exports.createPresignedURL = function(
   if (options.sessionToken && !options.signSessionToken) {
     query["X-Amz-Security-Token"] = options.sessionToken;
   } else {
-    delete query["X-Amz-Security-Token"];
+    // delete query["X-Amz-Security-Token"];   // BW-- commenting this out makes it work
   }
 
   return (
